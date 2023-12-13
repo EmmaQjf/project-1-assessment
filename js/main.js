@@ -12,16 +12,25 @@ init();
 
    /*----- event listeners -----*/
 minusBtn.addEventListener("click", () => {
-
     let inputAmount = parseInt(inputEl.value);
+    if (!inputAmount) {
+        displayEl.innerHTML = "You need to type in a number";
+        sum += 0;
+    } else {
     sum -= inputAmount;
     render();
+   }
   })
   
 plusBtn.addEventListener("click", () => { 
     let inputAmount = parseInt(inputEl.value);
+    if (!inputAmount) {
+        displayEl.innerHTML = "You need to type in a number";
+        sum += 0;
+    } else {
     sum += inputAmount;
     render();
+  }
   })
   
 	/*----- functions -----*/
